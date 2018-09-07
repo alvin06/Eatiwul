@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AchievementActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_below="@id/toolbar"
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Achievements"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar4"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:progress="25" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20%"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorDarkGray"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3/15"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorDarkGray"
+                    android:gravity="right"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="1000dp"
+            android:alignmentMode="alignMargins"
+            android:columnCount="3"
+            android:rowCount="5"
+            android:columnOrderPreserved="false"
+            android:nestedScrollingEnabled="true"
+            android:padding="14dp"
+            android:paddingEnd="4dp"
+            android:paddingStart="4dp"
+            android:paddingVertical="4dp"
+            android:scrollbars="vertical">
+            <!-- Row 1 -->
+            <!-- Col 1 -->
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/icon1"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="50dp"/>
+            <!-- Col 2 -->
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/icon4"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="50dp"/>
+            <!-- Col 3 -->
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/icon4"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="50dp"/>
+            <!-- Row 2 -->
+            <!-- Col 1 -->
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/icon4"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"/>
+            <!-- Col 2 -->
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/icon2"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"/>
+            <!-- Col 3 -->
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/icon4"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"/>
+            <!-- Row 3 -->
+            <!-- Col 1 -->
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/icon4"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"/>
+            <!-- Col 2 -->
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/icon4"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"/>
+            <!-- Col 3 -->
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/icon4"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"/>
+            <!-- Row 4 -->
+            <!-- Col 1 -->
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/icon4"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"/>
+            <!-- Col 2 -->
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/icon4"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"/>
+            <!-- Col 3 -->
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/icon3"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"/>
+            <!-- Row 4 -->
+            <!-- Col 1 -->
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/icon4"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"/>
+            <!-- Col 2 -->
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/icon4"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"/>
+            <!-- Col 3 -->
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/icon4"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"/>
+        </GridLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/icon1" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorLightBrown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation"
+        android:layout_alignParentLeft="true" />
+
+    <android.support.v7.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.GridLayout>
+
+</RelativeLayout>

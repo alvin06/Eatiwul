@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">eatiwul</string>
+    <string name="title_home">Home</string>
+    <string name="title_food">Food</string>
+    <string name="title_notification">Notification</string>
+    <string name="title_profile">Profile</string>
+</resources>
