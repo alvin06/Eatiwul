@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "457978776447",
+    "firebase_url": "https://eatiwul.firebaseio.com",
+    "project_id": "eatiwul",
+    "storage_bucket": "eatiwul.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:457978776447:android:9c6edf96379c15e7",
+        "android_client_info": {
+          "package_name": "com.example.alvinafandi.eatiwul"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "457978776447-7kqs4ij6suj598raaocc2ue6vrr2jarp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.alvinafandi.eatiwul",
+            "certificate_hash": "8ea8286a27014ab3ab296f34279bc0a074b45e31"
+          }
+        },
+        {
+          "client_id": "457978776447-u2l0jtlr2grannmm9u8umckjs10ame7u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDGakq-ju8ICzCaH2YPBzHF6jdWcdB6FQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "457978776447-u2l0jtlr2grannmm9u8umckjs10ame7u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
