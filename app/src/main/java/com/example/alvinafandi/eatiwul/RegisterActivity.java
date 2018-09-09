@@ -86,7 +86,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                         //checking if success
                         if(task.isSuccessful()){
                             //display some message here
-                            Toast.makeText(getApplicationContext(),"Successfully registered",Toast.LENGTH_LONG).show();
+                            finish();
+                            Intent intent = new Intent(RegisterActivity.this, CharacterActivity.class);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                            startActivity(intent);
                         }else{
                             //display some message here
 //                            Toast.makeText(getApplicationContext(),"Registration Error",Toast.LENGTH_LONG).show();
@@ -109,6 +112,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         }
         if(view == textViewSignin){
             //will open signin activity
+            finish();
             startActivity(new Intent(this,LoginActivity.class));
         }
     }

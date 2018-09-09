@@ -16,6 +16,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,12 +42,14 @@
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/left" />
 
-            <ImageView
-                android:id="@+id/character"
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
                 android:layout_width="160dp"
                 android:layout_height="270dp"
-                android:layout_gravity="center_horizontal"
-                app:srcCompat="@drawable/uniwhale" />
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/toolbar">
+
+            </android.support.v4.view.ViewPager>
 
             <Button
                 android:id="@+id/slideRight"
@@ -83,3 +86,5 @@
     </LinearLayout>
 
 </RelativeLayout>
+
+

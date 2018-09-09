@@ -128,6 +128,12 @@
                 android:textColor="@color/colorDarkBrown"
                 android:textSize="18sp" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log Out" />
     </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
