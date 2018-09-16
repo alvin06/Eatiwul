@@ -6,6 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 public class CharacterActivity extends AppCompatActivity implements View.OnClickListener {
     private Button select;
@@ -26,7 +30,6 @@ public class CharacterActivity extends AppCompatActivity implements View.OnClick
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this);
         select.setOnClickListener(this);
 
-
         viewPager.setAdapter(viewPagerAdapter);
     }
     public void onClick(View view){
@@ -34,10 +37,10 @@ public class CharacterActivity extends AppCompatActivity implements View.OnClick
             homePage();
         }
         if (view == slideLeft){
-            viewPager.setCurrentItem(viewPager.getCurrentItem()+1,true);
+            viewPager.setCurrentItem(viewPager.getCurrentItem()-1,true);
         }
         if (view == slideRight){
-            viewPager.setCurrentItem(viewPager.getCurrentItem()-1,true);
+            viewPager.setCurrentItem(viewPager.getCurrentItem()+1,true);
         }
     }
     private void homePage(){

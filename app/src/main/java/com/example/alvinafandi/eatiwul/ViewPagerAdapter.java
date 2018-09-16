@@ -25,6 +25,8 @@ public class ViewPagerAdapter extends PagerAdapter{
         return images.length;
     }
 
+
+
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
         return view == object;

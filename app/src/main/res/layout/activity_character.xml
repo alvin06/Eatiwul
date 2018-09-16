@@ -63,15 +63,15 @@
 
         <Button
             android:id="@+id/selectChar"
+            android:layout_marginTop="40dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/roundedbutton"
-            android:fontFamily="@font/montserrat_regular"
             android:text="OK"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="20sp"
             android:textColor="@color/colorWhite"
-            android:textSize="20sp" />
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/roundedbutton"/>
 
     </LinearLayout>
 
