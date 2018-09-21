@@ -9,20 +9,37 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import org.w3c.dom.Text;
 
 public class ProfileActivity extends AppCompatActivity implements View.OnClickListener {
     private Button buttonLogout;
+    private TextView textViewNameProfile;
+    private DatabaseReference databaseReference;
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         buttonLogout = (Button) findViewById(R.id.logout);
+        textViewNameProfile = (TextView) findViewById(R.id.textViewNameProfile);
+
+//        String id = mAuth.getCurrentUser().getUid();
+//        databaseReference = FirebaseDatabase.getInstance().getReference("users").child(id);
+        textViewNameProfile.setText("hoho");
         buttonLogout.setOnClickListener(this);
         navigationDrawer();
     }
+
 
     @Override
     public void onClick(View view) {

@@ -20,16 +20,21 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
     private Button buttonRegister;
     private EditText editTextEmail;
+    private EditText editTextUsername;
     private EditText editTextPassword;
     private TextView textViewSignin;
 
     private ProgressDialog progressDialog;
     private FirebaseAuth firebaseAuth;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,13 +42,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_register);
 
         firebaseAuth = FirebaseAuth.getInstance();
-
         progressDialog= new ProgressDialog(this);
 
         buttonRegister = (Button) findViewById(R.id.email_sign_up_button);
         editTextEmail = (EditText) findViewById(R.id.email);
         editTextPassword = (EditText) findViewById(R.id.password);
-
+        editTextUsername = (EditText) findViewById(R.id.username);
         textViewSignin = (TextView) findViewById(R.id.textViewSignin);
         buttonRegister.setOnClickListener(this);
         textViewSignin.setOnClickListener(this);
@@ -85,7 +89,14 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         //checking if success
                         if(task.isSuccessful()){
-                            //display some message here
+                            String user_id = firebaseAuth.getCurrentUser().getUid();
+                            DatabaseReference current_user = FirebaseDatabase.getInstance().getReference("users").child(user_id);
+
+                            String name = editTextUsername.getText().toString();
+                            Map newPost = new HashMap();
+                            newPost.put("name",name);
+                            current_user.setValue(newPost);
+
                             finish();
                             Intent intent = new Intent(RegisterActivity.this, CharacterActivity.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
